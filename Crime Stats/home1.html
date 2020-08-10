@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""></script>
+</head>
+<body>
+  <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title">RahoSavdhan</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation. We hide it in small screens. -->
+        <nav class="mdl-navigation mdl-layout--large-screen-only">
+          <a class="mdl-navigation__link active" href="">Home</a>
+          <a class="mdl-navigation__link" href="">Maps</a>
+          <a class="mdl-navigation__link" href="">LiveCrime</a>
+          <a class="mdl-navigation__link" href="">SMS/SOS Feature</a>
+          <a class="mdl-navigation__link" href="">About</a>
+
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">RahoSavdhan</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="home1.html">Home</a>
+        <a class="mdl-navigation__link" href="map.html">Maps</a>
+        <a class="mdl-navigation__link" href="">LiveCrime</a>
+        <a class="mdl-navigation__link" href="">SMS/SOS Feature</a>
+        <a class="mdl-navigation__link" href="">About</a>
+      </nav>
+    </div>
+    
+  </div>
+  <div class="bd-example">
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/twitter.jpg" class="d-block w-100" alt="twitter">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Live Crime Update</h5>
+            <p>Get live News about what is happening in your locality using the data from twitter</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/heatmapfeature.png" style="background: black; padding: 5vh; " class="d-block w-100" alt="heatMap">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Heat Maps</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/tweetnews1.png" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>News Feed</h5>
+            <p>Users can report a crime and our Authentication mechanism works to check the revelence of the news. </p>
+          </div>
+        </div>
+        
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="leafjs">
+      <div class="accordion" id="accordionExample">
+        <h2 class="safetyTips">SAFETY TIPS</h2>
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                FIRE MEASURES
+              </button>
+            </h2>
+          </div>
+      
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+                1. Remember to GET OUT, STAY OUT and CALL 101 or your local emergency phone number for firebrigade.<br><br>
+
+                2. Yell "Fire!" several times and go outside right away. If you live in a building with elevators, use the stairs. Leave all your things where they are and save yourself.<br><br>
+                
+                3. If closed doors or handles are warm or smoke blocks your primary escape route, use your second way out. Never open doors that are warm to the touch.<br><br>
+                
+                4. Once you are outside, go to your meeting place and then send one person to call the fire department. If you cannot get to your meeting    place, follow your family emergency communication plan.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                ROBBERY MEASURES
+              </button>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+                1. Remain calm and do not resist.Assure the robber you will cooperate and take no action that may jeopardize your safety. Don't make any quick or unexpected movements.<br><br>
+
+                2. Follow the robber's directions, but do not offer more than what they ask for.Don't argue. If you have to move or reach into your pockets to give the robber what they want, tell them what you are going to do and why.<br><br>
+                
+                3. Make mental notes of the robber's appearance.You'll need to describe the suspect when filing your report. Take note of their features including race, age, height, hair and eye color, clothing, etc If they have a weapon, make note of what it is so you can describe it later. If they come or go in a car, try to note the make and model and license plate number.<br><br>
+                
+                4. Notice what the robber does so you can include it in your report.If there are two accomplices, pay attention to any conversations they have with one another. Do they use each others names or nicknames? Do they mention any locations? Try to remember what they touch during the robbery so that police can check those areas for fingerprints.<br><br>
+                
+                5. After the robbery, go immediately to a safe location, then report the crime.
+                Your personal safety is your top priority. Make sure you feel secure before you call 100.
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                WITNESSEING HOMICIDE
+              </button>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+                1. Witnessing a murder has different immediate impacts on different individuals. The most important thing to do is get help and stay safe, even if you are afraid to contact the police or do not feel like you cannot handle any sort of interview. Be honest with authorities, and ask for clarification when you are unsure what is going on.<br><br>
+
+                2. Call 100 and Get Help from Someone You Trust. Always put your safety first, and use your best judgment.<br><br>
+                
+                3. Be Honest and Forthcoming With Police. Wait until police arrive in a safe place. The police will secure the crime scene, and all crime scene evidence will be processed. You are legally required to tell the truth to law enforcement. Be forthcoming with all questions, and only tell them what you know. Remember, homicide detectives are unlikely to care about petty drug use or parole violations.<br><br>
+                
+                4. It is not unusual for witnesses to not want to disclose who the perpetrator was. Often, witnesses are afraid about what might happen if they tell police what they saw. Similarly, witnesses may attempt to cleanup a crime scene to try to appease the perpetrator and stay safe themselves.Ask for Legal Assistance When Things Do Not Seem Right.<br><br>
+                5. Let the Experts Clean the Crime Scene. After the scene is processed, contact a professional crime scene cleanup company. Aftermath Services LLC is the leading trauma cleaning company in the United States. Get the help you need after a traumatic experience; crime scene cleaners can help return you to a happy, healthy life.
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    WITNESSEING ACCIDENTS
+                </button>
+              </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+              <div class="card-body">
+                1. Ensure Your Safety First.If you are driving when you spot a car crash, pull over to the side of the road at least 100 feet from the scene and put on your hazard lights. You want to give enough distance so you don't put yourself in danger of broken glass, leaked fuel, or flames.<br><br>
+
+                2. Smartphone screen with the emergency number 911 dialed - Person calling the support service phone line asking for helpNever assume that someone else already called 911. Even if the wreck doesn't appear severe, the authorities should be notified.  Let the 911 operator know you witnessed a car accident, the location, number of people involved, and any other pertinent details.<br><br>
+                
+                3. Check On The Victims. Once you've ensured that it's safe to approach the scene, check on the condition of the crash victims to make sure they are okay and offer help, if you are able. While this can be an emotionally taxing time, try to stick to the facts and remember that this is not the time to assess who is at fault for the accident or make judgments on what the other driver must have been thinking.<br><br>
+                
+                4. Stabilize The Vehicles. If the accident is minor, ask the driver to put the impacted vehicle in "park" and turn off the ignition. This will eliminate the risk of fire, especially since chances are good that the crash has caused an oil, fuel or coolant leak.  If it's safe to do so, enlist help to move the car out of further harm's way and to leave space for other vehicles and emergency responders.<br><br>
+                
+                5. Give A Statement & Provide Your Contact Information people looking at a car after an accidentWhen the police arrive, provide the relevant facts and your contact information.  In the days and weeks following the event, you may be contacted as a witness by legal and medical authorities and/or insurance claims agents.  Be honest, factual, and consistent with your statements.
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="leaf">
+      <h1>Twitterr World Map</h1>
+      <div id="mapid" style="width:900px; height:580px;"></div>
+
+      <p>Click the button to get your coordinates.</p>
+      <button onclick="getLocation()">check if you are in a danger zone</button>
+      <p id="demo">your latitude and longitude will be displayed here tap on the icon on the map.</p>
+      <script src="leaf.js"></script>
+    </div>
+  </div>
+</body>
+</html>

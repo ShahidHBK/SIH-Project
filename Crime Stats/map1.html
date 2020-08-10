@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>My Google Map</title>
+  <link rel="stylesheet" href="styles/map1.css">
+  <link rel="stylesheet" href="styles/nav.css">
+    
+  <script type="text/javascript">
+    function go(loc) {
+      document.getElementById('iMap').src = loc;
+    }
+    </script>
+    
+</head>
+<body>
+    <nav id="top">
+        <div class="container">
+            <div class="nav-header">
+                <a class="nav-logo" href="#">
+                    <p class="logoText">RahoSavdhan</p>
+                </a>
+            </div>
+            <div id="myNavbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    
+                    <li class="home">
+                        <a class="parallelogram" href="#">
+                            <div class="text">Home</div>
+                        </a>
+                    </li>
+                    <li class="Maps">
+                        <a class="parallelogram active" href="map.html">
+                            <div class="text">Maps</div>
+                        </a>
+                    </li>
+                    <li class="LiveCrime">
+                        <a class="parallelogram" href="#">
+                            <div class="text">LiveCrime</div>
+                        </a>
+                    </li>
+                    </li>
+                    <li class="SMS/SOS">
+                        <a class="parallelogram" href="#">
+                            <div class="text">SMS/SOS Feature</div>
+                        </a>
+                    </li>
+                    <li class="NewsFeed">
+                        <a class="parallelogram" href="">
+                            <div class="text">NewsFeed</div>
+                        </a>
+                    </li>
+                    <li class="Login">
+                        <a class="parallelogram" href="map.html">
+                            <div class="text">Login</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="content-fluid">
+
+        <div class="mapList">
+            
+            <ul id="list">
+                <h2>Select different types of Maps in India</h2>
+                <li onclick="go('https://maps.esp.tl/maps/_district-wise-crime-rate/pages/map.jsp?geoMapId=799471&TENANT_ID=236307&lp=c')">Total Crime-Rate</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Rate-of-Rape-in-India/pages/map.jsp?geoMapId=800695&TENANT_ID=236307&lp=c')">Rate of Rape</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Rate-of-murder-in-different-districts-in-India/pages/map.jsp?geoMapId=799654&TENANT_ID=236307&lp=c')">Rate of Murder</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Rate-of-robbery-in-India/pages/map.jsp?geoMapId=799662&TENANT_ID=236307&lp=c')">Rate of Robbery</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Forgery%2C-cheating-and-fraud/pages/map.jsp?geoMapId=799678&TENANT_ID=236307&lp=c')">Rate of Forgery Cheating and Fraud</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Offences-against-Property/pages/map.jsp?geoMapId=799674&TENANT_ID=236307&lp=c')">Rate of Offences against Property</li>
+                <li onclick="go('https://maps.esp.tl/maps/_Rate-of-Theft-India/pages/map.jsp?geoMapId=799686&TENANT_ID=236307&lp=c')">Rate of Theft</li>
+            </ul>
+
+        </div>
+        
+        <iframe id="iMap" src="https://maps.esp.tl/maps/_district-wise-crime-rate/pages/map.jsp?geoMapId=799471&TENANT_ID=236307&lp=c" frameborder="0" allowfullscreen></iframe>
+       
+    </div> 
+
+
+    <div class="mumbai">
+        <div class="mumMap">
+            <script src="https://gist.github.com/Dhirajtemkar/4fd22e7af7686e1e8610b09cb4d6d650.js?height=300&width=500"></script>
+        </div>
+        <div class="mumbai_content">
+            <h2>Specialized View</h2>
+            <p>Shows the crime in different wards of the Mumbai, through color-coded informaition</p>
+        </div>
+    </div>
+</body>
+</html>

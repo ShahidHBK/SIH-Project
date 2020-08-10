@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+      integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+      crossorigin=""></script>
+</head>
+<body>
+    <div id="mapid" style="width:900px; height:480px;"></div>
+    <input type="radio" id="button" onselect="addMark">Add a marker</input>
+    <script src="javascript/test.js"></script>
+    <p id="latitude" type="text">latitude</p>
+    <p id="longitude" type="text">longitude</p>
+
+
+    <script>
+  
+        function onMapClick(e) {
+            var marker = L.marker(e.latlng).addTo(mymap);
+            //get the latitude and longiude through .latlng
+            console.log(e.latlng.lat);
+            console.log(e.latlng.lng);
+            document.getElementById('latitude').innerHTML = e.latlng.lat;
+            document.getElementById('longitude').innerHTML = e.latlng.lng;
+
+            /*var popup = L.popup()
+            .setLatLng(e.latlng)
+            .setContent("I am a standalone popup.")
+            .openOn(mymap);*/
+        } 
+        mymap.on('click', onMapClick);  
+
+        var popup = L.popup()
+        .setLatLng([51.5, -0.09])
+        .setContent("I am a standalone popup.")
+        .openOn(mymap);
+
+    </script>
+
+</body>
+</html>
